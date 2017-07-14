@@ -12,5 +12,5 @@ console.log(x); //Uncaught ReferenceError: x is not defined
 }
 
 {
-  console.log(name); // undefined
+  console.log(name); //Uncaught ReferenceError: name is not defined
 }

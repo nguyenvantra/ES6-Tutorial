@@ -2,7 +2,7 @@
 ES6 là phiên bản mới nhất của bộ tiêu chuẩn ECMAScript. ES6 ra mắt giữa 2015 với rất nhiều những tính năng sau
 
 ## let, const
-**Let** cho phép chúng ta khai báo biến trong phạm vi các khối lệnh **(Block Scoped)**. Các khối lệnh **(Block Scoped)** được định nghĩa bởi cặp ngoặc nhọn **{}**.
+**let** cho phép chúng ta khai báo biến trong phạm vi các khối lệnh **(Block Scoped)**. Các khối lệnh **(Block Scoped)** được định nghĩa bởi cặp ngoặc nhọn **{}**.
 
 ```javascript
 if(true){
@@ -11,7 +11,9 @@ if(true){
 }
 console.log(x); //Uncaught ReferenceError: x is not defined
 ```
-**Const** là **hằng số**, có nghĩa là biến được khai báo bởi từ khoá **const** thì **không thể thay đổi giá trị**.
+**const** là **hằng số**, có nghĩa là biến được khai báo bởi từ khoá **const** thì **không thể thay đổi giá trị**.
+
+Example:
 
 ```javascript
 {
@@ -22,6 +24,8 @@ console.log(x); //Uncaught ReferenceError: x is not defined
 }
 ```
 **const** cũng giới hạn phạm vi trong các khối lệnh **(Block Scoped)** giống như **let**
+
+Example:
 ```javascript
 {
   const name = 'Nguye Van Tra';
@@ -30,4 +34,16 @@ console.log(x); //Uncaught ReferenceError: x is not defined
 {
   console.log(name); // undefined
 }
+```
+## Arrow Function
+Sử dụng **=>** để khai báo function trong javascript. Cách khai báo này tương đối giống
+**Lambda Expression** trong **Java8**, giúp cho code tường minh và ngắn gọn hơn.
+
+Example:
+```javascript
+var showName = (name) => {
+  console.log(name);
+};
+
+showName('Nguyen Van Tra'); // Nguyen Van Tra
 ```
