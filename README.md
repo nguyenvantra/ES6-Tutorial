@@ -140,7 +140,8 @@ console.log(showName()); // Nguyen Van Tra
 ```
 
 ## Rest Parameters
-Có thể khai báo một hàm với số lượng tham số không xác định.Để khai báo **Rest Parameter** thì sử dụng dấu ```**...**``` trước biến đại diện.
+Có thể khai báo một hàm với số lượng tham số không xác định. Để khai báo **Rest Parameter** thì sử dụng dấu ```...``` trước biến đại diện.
+
 Example:
 ```javascript
 var data = (id, name, ...other) => {
@@ -149,4 +150,41 @@ var data = (id, name, ...other) => {
   console.log(other); // ["Nha Giau", "Dep Trai"]
 }
 data("13130317", "Nguyen Van Tra", "Nha Giau", "Dep Trai");
+```
+
+## Class
+ES5 không hổ trợ class như các ngôn ngữ lập trình hướng đối tượng khác, nhưng mô phỏng **class** thông qua các **function và prototype**. Trong ES6 đã hổ trợ **class**, **constructor**, **get/set**.
+
+Example:
+```javascript
+class Shape {
+  constructor(color) {
+    this.color = color;
+  }
+
+  getColor() {
+    return "Color: " + this.color;
+  }
+}
+
+var shape = new Shape("Red");
+console.log(shape.getColor()); // Color: Red
+```
+
+ES6 hỗ trợ **kế thừa** bằng từ khoá **extends**
+```javascript
+class Rectangle extends Shape {
+  constructor(color, width, height) {
+    super(color);
+    this.width = width;
+    this.height = height;
+  }
+}
+
+class Circle extends Shape {
+  constructor(color, radius) {
+    super(color);
+    this.radius = radius;
+  }
+}
 ```
