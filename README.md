@@ -138,3 +138,15 @@ function showName(name = "Nguyen Van Tra") {
 }
 console.log(showName()); // Nguyen Van Tra
 ```
+
+## Rest Parameters
+Có thể khai báo một hàm với số lượng tham số không xác định.Để khai báo **Rest Parameter** thì sử dụng dấu ```**...**``` trước biến đại diện.
+Example:
+```javascript
+var data = (id, name, ...other) => {
+  console.log(id); // 13130317
+  console.log(name); // Nguyen Van Tra
+  console.log(other); // ["Nha Giau", "Dep Trai"]
+}
+data("13130317", "Nguyen Van Tra", "Nha Giau", "Dep Trai");
+```
