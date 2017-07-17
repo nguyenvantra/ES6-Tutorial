@@ -304,3 +304,18 @@ numbers.forEach(function(number) {
 // Dùng for...of
 for(var number of numbers) console.log(number);
 ```
+
+## Template String
+Javascript **không có String.format** nên nối chuỗi rất cực. ES6 ra mắt **Template String** sẽ thay thế cách nối chuỗi thông thường.
+
+```javascript
+var id = "13130317";
+var name = "Nguyen Van Tra";
+var email = "dkdarknessnvt@gmail.com";
+
+// Cách nối chuỗi thông thường
+console.log("id: " + id + ", name: " + name + ", email:" + email);
+
+// Template String ES6
+console.log(`id: ${id}, name: ${name}, email:${email}`);
+```
