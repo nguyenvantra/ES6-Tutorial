@@ -1,4 +1,4 @@
-if(true){
+if (true) {
   let x = 10;
   console.log(x); // in ra 10;
 }
