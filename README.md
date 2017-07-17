@@ -212,3 +212,75 @@ var data = {
 
 console.log(data); // {id: "13130317", name: "Nguyen Van Tra"}
 ```
+## Collection ES6
+### Set
+Set là một mảng mà trong đó không có phần tử nào trùng nhau.
+
+Example:
+```javascript
+let mySet = new Set(); // khởi tạo
+
+mySet.add(1); // Thêm phần tử cho Set
+mySet.add(2); // Thêm phần tử cho Set
+mySet.add(3); // Thêm phần tử cho Set
+mySet.add(4); // Thêm phần tử cho Set
+mySet.add(5); // Thêm phần tử cho Set
+
+mySet.delete(1); // Xoa phần tử trong set
+
+mySet.has(5); // Kiểm tra phần tử tồn tại trong Set
+
+mySet.size(); // Đếm tổng số phần tử
+
+mySet.clear(); // Xoá toàn bộ phần tử
+
+//Duyệt Set sử dụng for of
+for (let data of mySet) {
+  console.log(data);
+}
+```
+
+### Maps
+Map là cấu trúc dữ liệu cho phép ta lưu dữ liệu dưới dạng Key-Value. Đối với Map thì các key không được trùng, vì vậy nếu bạn truyền vào 2 key giống nhau thì nó chỉ lưu đè vào một key duy nhất.
+
+Example:
+```javascript
+let myMap = new Map(); // khởi tạo
+
+myMap.set("name", "Nguyen Van Tra"); // Thêm phần tử cho map
+myMap.set("email", "dkdarknessnvt@gmail.com"); // Thêm phần tử cho map
+
+myMap.delete("name"); // Xoá phần tử có key là name
+
+myMap.has("email"); // Kiểm tra phần tử tồn tại
+
+myMap.size(); // Đếm tổng số phần tử
+
+myMap.clear(); // Xoá toàn bộ data
+
+// Hàm keys() lấy danh sách key
+for (var key of myMap.keys()) {
+  console.log(key);
+}
+
+// Hàm values() lấy danh sách values
+for (var value of myMap.values()) {
+  console.log(value);
+}
+
+// Hàm entries() lấy danh sách key và value
+for (var entry of myMap.entries()) {
+  console.log(entry);
+}
+
+// Duyệt map sử dụng for
+for (let [key, value] of myMap) {
+  console.log(key + "-" + value);
+}
+
+// Duyệt map sử dung foreachforeach
+
+myMap.forEach((key, value) => {
+  console.log(key + "-" + value);
+});
+```
