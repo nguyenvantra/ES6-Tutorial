@@ -284,3 +284,23 @@ myMap.forEach((key, value) => {
   console.log(key + "-" + value);
 });
 ```
+
+## Iterator
+Để duyệt qua từng phần tử trong một mảng, ta phải sử dụng hàm for. Ta củng có thể sử dụng hàm forEach. Trong ES6, ta đã có thêm for… of để duyệt từng phần tử trong một mảng.
+
+Example:
+```javascript
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// Cách cũ, duyệt từ đầu
+for(var i = 0; i< numbers.length; i ++)
+{
+  console.log(number[i]);
+}
+// Dùng forEach
+numbers.forEach(function(number) {
+  console.log(number);
+})
+
+// Dùng for...of
+for(var number of numbers) console.log(number);
+```
